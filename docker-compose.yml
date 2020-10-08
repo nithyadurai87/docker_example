@@ -1,0 +1,16 @@
+version: '3'
+
+services:
+  app:
+    build: .
+    image: flaskapp:v10
+    environment:
+      - FLASK_ENV=development
+    ports:
+      - 5000:5000
+    #volumes: 
+      #- /home/nithya/backup:/app/tmpfiles
+
+  mongodb:
+    image: mongo
+    
