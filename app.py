@@ -12,8 +12,8 @@ def index():
     if request.method == 'POST':
         data = request.get_json()
         collection.insert_one(data).inserted_id
-        #with open('./tmpfiles/data.log','a') as f:
-            #f.write(str(data)+'/n')
+        with open('./tmpfiles/data.log','a') as f:
+            f.write(str(data)+'/n')
         return ('', 204)
         
     if request.method == 'GET':

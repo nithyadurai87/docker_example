@@ -8,8 +8,8 @@ services:
       - FLASK_ENV=development
     ports:
       - 5000:5000
-    #volumes: 
-      #- /home/nithya/backup:/app/tmpfiles
+    volumes: 
+      - /home/nithya/backup:/app/tmpfiles
 
   mongodb:
     image: mongo
